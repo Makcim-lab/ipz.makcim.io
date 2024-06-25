@@ -4,79 +4,73 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    text-align: center;
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 1rem 0;
+    padding: 1rem;
+    text-align: center;
 }
 
-h1, h2 {
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+aside {
+    background-color: #e0e0e0;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+article {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+article h2 {
     color: #333;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    text-align: center;
-    width: 80%;
-    max-width: 600px;
-}
-
-/* Стилі для першого прикладу */
-.outer-block {
-    border: 2px solid #009879;
-    background-color: #e0f7fa;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-
-.inner-block {
-    border: 2px solid #00796b;
-    background-color: #b2dfdb;
-    padding: 15px;
-    margin: 10px;
-    text-align: center;
-}
-
-.innermost-block {
-    border: 2px solid #004d40;
-    background-color: #80cbc4;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-}
-
-/* Стилі для другого прикладу */
-.outer-block-alt {
-    border: 2px solid #ff5722;
-    background-color: #ffebee;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-
-.inner-block-alt {
-    border: 2px solid #e64a19;
-    background-color: #ffcdd2;
-    padding: 15px;
-    margin: 10px;
-    text-align: center;
-}
-
-.innermost-block-alt {
-    border: 2px solid #bf360c;
-    background-color: #ef9a9a;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-}
-
 footer {
-    background
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
