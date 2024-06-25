@@ -3,39 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таблиця з CSS</title>
+    <title>Приклад документа з форматуванням</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <table class="styled-table">
-        <thead>
-            <tr>
-                <th>Ім'я</th>
-                <th>Прізвище</th>
-                <th>Вік</th>
-                <th>Місто</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Іван</td>
-                <td>Іваненко</td>
-                <td>25</td>
-                <td>Київ</td>
-            </tr>
-            <tr class="active-row">
-                <td>Олена</td>
-                <td>Петрівна</td>
-                <td>30</td>
-                <td>Львів</td>
-            </tr>
-            <tr>
-                <td>Сергій</td>
-                <td>Ковальчук</td>
-                <td>28</td>
-                <td>Одеса</td>
-            </tr>
-        </tbody>
-    </table>
+    <header>
+        <h1>Мій Прикладовий Документ</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Розділ 1</a></li>
+                <li><a href="#section2">Розділ 2</a></li>
+                <li><a href="#section3">Розділ 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section1">
+        <h2>Розділ 1: Вступ</h2>
+        <p>Ласкаво просимо до мого прикладового документа. Це <strong>важливий</strong> документ, який демонструє різні можливості <em>HTML</em> та <mark>CSS</mark>. Ви можете знайти корисну інформацію у <a href="https://example.com" target="_blank">цих статтях</a>.</p>
+        
+        <figure>
+            <img src="https://via.placeholder.com/300" alt="Приклад зображення">
+            <figcaption>Приклад зображення з підписом</figcaption>
+        </figure>
+    </section>
+
+    <section id="section2">
+        <h2>Розділ 2: Основний зміст</h2>
+        <h3>Підрозділ 2.1: Тема</h3>
+        <p>Тут ми обговоримо основні аспекти нашої теми. <a href="#section3">Перейти до наступного розділу</a>.</p>
+        
+        <p>Ось ще одне зображення:</p>
+        <img src="https://via.placeholder.com/300" alt="Інше зображення" style="display: block; margin: 10px auto;">
+    </section>
+
+    <section id="section3">
+        <h2>Розділ 3: Висновки</h2>
+        <p>Це завершальний розділ нашого документа. Повернутися до <a href="#section1">початку документа</a>.</p>
+        
+        <figure>
+            <img src="https://via.placeholder.com/300" alt="Заключне зображення">
+            <figcaption>Заключне зображення з підписом</figcaption>
+        </figure>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Максим. Усі права захищено.</p>
+    </footer>
 </body>
 </html>
