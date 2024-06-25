@@ -3,95 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приклади мультимедіа та графіки</title>
+    <title>Адаптивна веб-сторінка з форматуванням тексту</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Приклади мультимедіа та графіки</h1>
+        <h1>Адаптивна веб-сторінка з форматуванням тексту</h1>
         <nav>
             <ul>
-                <li><a href="#video">Відео</a></li>
-                <li><a href="#audio">Аудіо</a></li>
-                <li><a href="#maps">Карти</a></li>
-                <li><a href="#image-maps">Карта зображення</a></li>
-                <li><a href="#canvas">Canvas</a></li>
-                <li><a href="#svg">SVG</a></li>
+                <li><a href="#introduction">Вступ</a></li>
+                <li><a href="#quotes">Цитати</a></li>
+                <li><a href="#text-formatting">Форматування тексту</a></li>
+                <li><a href="#contact">Контакти</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="video">
-            <h2>Вставка відео</h2>
-            <h3>Відео за допомогою &lt;iframe&gt;</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-            
-            <h3>Відео за допомогою &lt;video&gt;</h3>
-            <video width="560" controls>
-                <source src="video.mp4" type="video/mp4">
-                Ваш браузер не підтримує тег відео.
-            </video>
+        <section id="introduction">
+            <h2>Вступ</h2>
+            <p>Це приклад адаптивної веб-сторінки, яка демонструє використання різних тегів для форматування тексту. Ми використовуємо такі теги, як <code>&lt;q&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;address&gt;</code>, <code>&lt;cite&gt;</code>, <code>&lt;bdo&gt;</code> та інші.</p>
         </section>
 
-        <section id="audio">
-            <h2>Вставка аудіо</h2>
-            <audio controls>
-                <source src="audio.mp3" type="audio/mpeg">
-                Ваш браузер не підтримує тег аудіо.
-            </audio>
+        <section id="quotes">
+            <h2>Цитати</h2>
+            <p>Тег <code>&lt;q&gt;</code> використовується для коротких цитат, як у цьому реченні: <q>Це приклад короткої цитати.</q></p>
+            <p>Тег <code>&lt;blockquote&gt;</code> використовується для довших цитат:</p>
+            <blockquote>
+                <p>Це приклад довгої цитати, яка містить більше тексту. Використовуйте цей тег, коли цитата займає кілька рядків або параграфів. Цей текст демонструє, як виглядає блокова цитата.</p>
+                <cite>— Автор цитати</cite>
+            </blockquote>
         </section>
 
-        <section id="maps">
-            <h2>Вставка карт</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094827!2d144.96305781567837!3d-37.81410797975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727ef4e9b8a89e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1619331964043!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section id="text-formatting">
+            <h2>Форматування тексту</h2>
+            <p>Використання тега <code>&lt;abbr&gt;</code> для абревіатур: <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+            <p>Тег <code>&lt;address&gt;</code> використовується для вказання контактної інформації:</p>
+            <address>
+                Ім'я Прізвище<br>
+                Вулиця, 123<br>
+                Місто, Країна<br>
+                <a href="mailto:example@example.com">example@example.com</a>
+            </address>
+            <p>Тег <code>&lt;bdo&gt;</code> використовується для зміни напрямку тексту. Наприклад, цей текст буде відображений справа наліво: <bdo dir="rtl">Привіт, світ!</bdo></p>
+            <p>Для посилань на інші ресурси використовуйте тег <code>&lt;cite&gt;</code>: <cite>Назва книги або статті</cite>.</p>
         </section>
 
-        <section id="image-maps">
-            <h2>Посилання з частин зображення</h2>
-            <img src="image-map.jpg" usemap="#image-map" alt="Приклад карти зображення">
-            <map name="image-map">
-                <area shape="rect" coords="34,44,270,350" alt="Частина 1" href="https://example.com/part1">
-                <area shape="circle" coords="477,300,44" alt="Частина 2" href="https://example.com/part2">
-                <area shape="poly" coords="130,136,132,321,253,302" alt="Частина 3" href="https://example.com/part3">
-            </map>
-        </section>
-
-        <section id="canvas">
-            <h2>Приклад роботи з canvas</h2>
-            <canvas id="myCanvas" width="600" height="400" style="border:1px solid #000000;"></canvas>
-        </section>
-
-        <section id="svg">
-            <h2>Приклад роботи з SVG</h2>
-            <svg width="400" height="180">
-                <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-            </svg>
+        <section id="contact">
+            <h2>Контакти</h2>
+            <p>Якщо у вас є питання, зв'яжіться з нами за адресою:</p>
+            <address>
+                Ім'я Прізвище<br>
+                Вулиця, 123<br>
+                Місто, Країна<br>
+                <a href="mailto:example@example.com">example@example.com</a>
+            </address>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Максим. Усі права захищено.</p>
     </footer>
-
-    <div class="background-video">
-        <video autoplay muted loop id="bgVideo">
-            <source src="background-video.mp4" type="video/mp4">
-            Ваш браузер не підтримує тег відео.
-        </video>
-    </div>
-
-    <script>
-        const canvas = document.getElementById('myCanvas');
-        const ctx = canvas.getContext('2d');
-
-        // Малюємо на canvas
-        ctx.fillStyle = '#FF0000';
-        ctx.fillRect(20, 20, 150, 100);
-
-        ctx.beginPath();
-        ctx.arc(240, 160, 70, 0, 2 * Math.PI);
-        ctx.stroke();
-    </script>
 </body>
 </html>
