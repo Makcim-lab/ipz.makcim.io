@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приклади анімацій</title>
+    <title>Приклади вкладення блоків</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Приклади анімацій</h1>
+        <h1>Приклади вкладення блоків</h1>
     </header>
 
     <section>
-        <h2>Анімація за допомогою тега &lt;marquee&gt;</h2>
-        <marquee behavior="scroll" direction="left">Це текст, що рухається за допомогою тега &lt;marquee&gt;</marquee>
-        <marquee behavior="alternate" direction="up">Це текст, що рухається вгору-вниз за допомогою тега &lt;marquee&gt;</marquee>
+        <h2>Приклад 1</h2>
+        <div class="outer-block">
+            Зовнішній блок
+            <div class="inner-block">
+                Внутрішній блок
+                <div class="innermost-block">
+                    Найвнутрішній блок
+                </div>
+            </div>
+        </div>
     </section>
 
     <section>
-        <h2>Анімація за допомогою CSS animation</h2>
-        <div class="box-container">
-            <div class="box">CSS Анімація</div>
+        <h2>Приклад 2</h2>
+        <div class="outer-block-alt">
+            Зовнішній блок
+            <div class="inner-block-alt">
+                Внутрішній блок
+                <div class="innermost-block-alt">
+                    Найвнутрішній блок
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Максим. Усі права захищено.</p>
+        <p>&copy; 2024 Ваше Ім'я. Усі права захищено.</p>
     </footer>
 </body>
 </html>
