@@ -3,50 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приклад будови сайту</title>
+    <title>Приклади мультимедіа та графіки</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Приклад будови сайту</h1>
+        <h1>Приклади мультимедіа та графіки</h1>
         <nav>
             <ul>
-                <li><a href="#section1">Розділ 1</a></li>
-                <li><a href="#section2">Розділ 2</a></li>
-                <li><a href="#section3">Розділ 3</a></li>
+                <li><a href="#video">Відео</a></li>
+                <li><a href="#audio">Аудіо</a></li>
+                <li><a href="#maps">Карти</a></li>
+                <li><a href="#image-maps">Карта зображення</a></li>
+                <li><a href="#canvas">Canvas</a></li>
+                <li><a href="#svg">SVG</a></li>
             </ul>
         </nav>
     </header>
 
-    <aside>
-        <h2>Бічна панель</h2>
-        <p>Тут можна розмістити додаткову інформацію, посилання або рекламу.</p>
-    </aside>
-
     <main>
-        <article>
-            <section id="section1">
-                <h2>Розділ 1: Вступ</h2>
-                <p>Це приклад великого тексту з заголовками. Тут ми розглядаємо структуру HTML-документа з використанням семантичних тегів.</p>
-                <p>HTML-документ складається з кількох основних частин: заголовок, навігація, бічна панель, основний вміст та підвал.</p>
-            </section>
-            <section id="section2">
-                <h2>Розділ 2: Основна частина</h2>
-                <p>Основна частина містить основний вміст сторінки. Це може бути текст, зображення, відео, таблиці та інші елементи.</p>
-                <p>Важливо використовувати правильні теги для структурування вмісту, щоб полегшити його читання та доступність.</p>
-                <h3>Підрозділ 2.1: Семантичні теги</h3>
-                <p>Семантичні теги, такі як <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> і <code>&lt;footer&gt;</code>, допомагають структурувати документ і роблять його більш зрозумілим для пошукових систем та асистивних технологій.</p>
-            </section>
-            <section id="section3">
-                <h2>Розділ 3: Висновок</h2>
-                <p>Використання семантичних тегів та правильне структурування вмісту допомагає створювати зрозумілі та доступні веб-сторінки.</p>
-                <p>Дотримання стандартів HTML і використання правильних тегів забезпечує кращу сумісність та покращує користувацький досвід.</p>
-            </section>
-        </article>
+        <section id="video">
+            <h2>Вставка відео</h2>
+            <h3>Відео за допомогою &lt;iframe&gt;</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            
+            <h3>Відео за допомогою &lt;video&gt;</h3>
+            <video width="560" controls>
+                <source src="video.mp4" type="video/mp4">
+                Ваш браузер не підтримує тег відео.
+            </video>
+        </section>
+
+        <section id="audio">
+            <h2>Вставка аудіо</h2>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Ваш браузер не підтримує тег аудіо.
+            </audio>
+        </section>
+
+        <section id="maps">
+            <h2>Вставка карт</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094827!2d144.96305781567837!3d-37.81410797975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727ef4e9b8a89e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1619331964043!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+        <section id="image-maps">
+            <h2>Посилання з частин зображення</h2>
+            <img src="image-map.jpg" usemap="#image-map" alt="Приклад карти зображення">
+            <map name="image-map">
+                <area shape="rect" coords="34,44,270,350" alt="Частина 1" href="https://example.com/part1">
+                <area shape="circle" coords="477,300,44" alt="Частина 2" href="https://example.com/part2">
+                <area shape="poly" coords="130,136,132,321,253,302" alt="Частина 3" href="https://example.com/part3">
+            </map>
+        </section>
+
+        <section id="canvas">
+            <h2>Приклад роботи з canvas</h2>
+            <canvas id="myCanvas" width="600" height="400" style="border:1px solid #000000;"></canvas>
+        </section>
+
+        <section id="svg">
+            <h2>Приклад роботи з SVG</h2>
+            <svg width="400" height="180">
+                <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+            </svg>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Максим. Усі права захищено.</p>
     </footer>
+
+    <div class="background-video">
+        <video autoplay muted loop id="bgVideo">
+            <source src="background-video.mp4" type="video/mp4">
+            Ваш браузер не підтримує тег відео.
+        </video>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Малюємо на canvas
+        ctx.fillStyle = '#FF0000';
+        ctx.fillRect(20, 20, 150, 100);
+
+        ctx.beginPath();
+        ctx.arc(240, 160, 70, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
 </body>
 </html>
