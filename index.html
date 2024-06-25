@@ -3,39 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Таблиця з CSS</title>
+    <title>Приклади форм з JavaScript</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <table class="styled-table">
-        <thead>
-            <tr>
-                <th>Ім'я</th>
-                <th>Прізвище</th>
-                <th>Вік</th>
-                <th>Місто</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Іван</td>
-                <td>Іваненко</td>
-                <td>25</td>
-                <td>Київ</td>
-            </tr>
-            <tr class="active-row">
-                <td>Олена</td>
-                <td>Петрівна</td>
-                <td>30</td>
-                <td>Львів</td>
-            </tr>
-            <tr>
-                <td>Сергій</td>
-                <td>Ковальчук</td>
-                <td>28</td>
-                <td>Одеса</td>
-            </tr>
-        </tbody>
-    </table>
+    <header>
+        <h1>Приклади форм з JavaScript</h1>
+    </header>
+
+    <section>
+        <h2>Реєстраційна форма</h2>
+        <form id="registration-form">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <input type="submit" value="Зареєструватися">
+        </form>
+    </section>
+
+    <section>
+        <h2>Форма зворотного зв'язку</h2>
+        <form id="feedback-form">
+            <label for="username">Ім'я користувача:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="feedback">Відгук:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+            <br>
+            <input type="submit" value="Відправити">
+        </form>
+    </section>
+
+    <section>
+        <h2>Калькулятор додавання</h2>
+        <form id="calculator-form">
+            <label for="num1">Число 1:</label>
+            <input type="number" id="num1" name="num1" required>
+            <br>
+            <label for="num2">Число 2:</label>
+            <input type="number" id="num2" name="num2" required>
+            <br>
+            <input type="submit" value="Додати">
+        </form>
+        <p id="result"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Максим. Усі права захищено.</p>
+    </footer>
+
+    <script>
+        // JavaScript для обробки форми калькулятора
+        document.getElementById('calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result = num1 + num2;
+            document.getElementById('result').textContent = 'Результат: ' + result;
+        });
+    </script>
 </body>
 </html>
